@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "title": "Configurar o projeto",
+      "description": "Iniciar o repositório do projeto e configurar as ferramentas básicas.",
+      "status": "in_progress",
+      "id": "1"
+    },
+    {
+      "title": "Revisão de código",
+      "description": "Revisar o código e melhorar a qualidade antes de enviar para produção.",
+      "status": "done",
+      "id": "5"
+    },
+    {
+      "title": "Implementar autenticação",
+      "description": "Adicionar sistema de autenticação para proteger o acesso ao quadro de tarefas.",
+      "status": "todo",
+      "id": "6"
+    },
+    {
+      "title": "Atualizar a documentação",
+      "description": "Escrever e atualizar a documentação técnica do projeto.",
+      "status": "done",
+      "id": "7"
+    },
+    {
+      "id": "8",
+      "title": "Deploy da aplicação",
+      "description": "Lançar a aplicação no ambiente de produção.",
+      "status": "todo"
+    }
+  ]
+}
