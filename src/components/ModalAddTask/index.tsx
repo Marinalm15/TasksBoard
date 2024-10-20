@@ -21,12 +21,12 @@ export function ModalAddTask({ isModalOpen, setIsOpenModal }: ModalProps) {
 
     const handleCreateNewTask = (data: TaskInputs) => {
         createTask(data);
-        reset(); // Reset the form fields after saving
+        reset();
         setIsOpenModal(false);
     };
 
     const handleCancel = () => {
-        reset(); // Reset the form fields when cancelling
+        reset();
         setIsOpenModal(false);
     };
 

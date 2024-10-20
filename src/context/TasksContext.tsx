@@ -55,7 +55,7 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
     const deleteTask = useCallback(async (id: number) => {
         try {
             await apiPrivate.delete(`/tasks/${id}`);
-            setTasks(prevTasks => prevTasks.filter(task => task.id !== id)); // Remove localmente após deletar
+            setTasks(prevTasks => prevTasks.filter(task => task.id !== id));
         } catch (error) {
             console.error("Erro ao deletar tarefa:", error);
         }
@@ -63,10 +63,8 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
 
     const updateTaskStatus = useCallback(async (id: number, data: { title: string, description: string, status: 'todo' | 'in_progress' | 'done' }): Promise<Task> => {
         try {
-            // Atualiza a tarefa enviando todos os campos (título, descrição e status)
             const response = await apiPrivate.put<Task>(`/tasks/${id}`, data);
 
-            // Atualiza o estado local para refletir a mudança
             setTasks((prevTasks) =>
                 prevTasks.map((task) =>
                     task.id === id ? { ...task, ...response.data } : task

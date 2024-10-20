@@ -10,7 +10,7 @@ export function Board() {
     const [isOpenModal, setIsOpenModal] = useState(false)
     const { openChat } = useTasks()
 
-    console.log(openChat)
+
     return (
         <>
             <BoardContainer>
