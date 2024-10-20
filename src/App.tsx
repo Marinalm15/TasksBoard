@@ -1,9 +1,13 @@
+import { Board } from "./components/Board";
+import { TaskContextProvider } from "./context/TasksContext";
 
 export function App() {
 
   return (
     <>
-      <p>hello world</p>
+      <TaskContextProvider>
+        <Board />
+      </TaskContextProvider>
     </>
   )
 }
